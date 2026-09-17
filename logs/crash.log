@@ -1,0 +1,45 @@
+Traceback (most recent call last):
+  File "C:\POP-IT-Toolbox-v3.2.7\app\pages\agent_page.py", line 54, in send_message
+    self.chat.append(reply)
+    ~~~~~~~~~~~~~~~~^^^^^^^
+TypeError: 'PySide6.QtWidgets.QTextEdit.append' called with wrong argument types:
+  PySide6.QtWidgets.QTextEdit.append(list)
+Supported signatures:
+  PySide6.QtWidgets.QTextEdit.append(text: str, /)
+
+
+Traceback (most recent call last):
+  File "C:\POP-IT-Toolbox-v3.2.7\app\pages\agent_page.py", line 58, in send_message
+    if item["success"]:
+       ~~~~^^^^^^^^^^^
+TypeError: string indices must be integers, not 'str'
+
+
+Traceback (most recent call last):
+  File "C:\POP-IT-Toolbox-v3.2.7\app\pages\agent_page.py", line 59, in send_message
+    cursor.movePosition(cursor.End)
+                        ^^^^^^^^^^
+AttributeError: 'PySide6.QtGui.QTextCursor' object has no attribute 'End'
+
+
+Traceback (most recent call last):
+  File "C:\POP-IT-Toolbox-v3.2.7\app\pages\agent_page.py", line 59, in send_message
+    cursor.movePosition(cursor.End)
+                        ^^^^^^^^^^
+AttributeError: 'PySide6.QtGui.QTextCursor' object has no attribute 'End'
+
+
+Traceback (most recent call last):
+  File "C:\POP-IT-Toolbox-v3.2.7\app\pages\agent_page.py", line 59, in send_message
+    cursor.movePosition(cursor.End)
+                        ^^^^^^^^^^
+AttributeError: 'PySide6.QtGui.QTextCursor' object has no attribute 'End'
+
+
+Traceback (most recent call last):
+  File "C:\POP-IT-Toolbox-v3.2.7\app\pages\agent_page.py", line 61, in send_message
+    cursor.select(cursor.LineUnderCursor)
+                  ^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'PySide6.QtGui.QTextCursor' object has no attribute 'LineUnderCursor'
+
+

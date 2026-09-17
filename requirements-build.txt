@@ -1,0 +1,6 @@
+# 打包机专用依赖（运行 exe 的机器无需安装 Python）
+-r requirements.txt
+
+pywin32>=306        # 打印机管理增强
+pyinstaller>=6.10   # 打包工具
+packaging>=23.0     # PyInstaller 版本解析依赖

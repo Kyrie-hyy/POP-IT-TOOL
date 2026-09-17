@@ -1,0 +1,502 @@
+/* ============================================================
+   POP IT Toolbox V2 - Enterprise Fluent Design Stylesheet
+   ============================================================
+   Inspired by Microsoft Fluent Design, Windows Security,
+   Microsoft 365 Admin Center, and PowerToys.
+   
+   Primary: #FFC928 (POP MART Yellow)
+   Background: #F7F8FA
+   Cards: White with soft shadows
+   Radius: 18px (cards), 10px (buttons)
+   Shadow: 0 6px 25px rgba(0,0,0,0.08)
+   Border: #EAEAEA
+   ============================================================ */
+
+/* ============================================================
+   Global Defaults
+   ============================================================ */
+
+QWidget {
+    font-family: "Segoe UI", "Microsoft YaHei", "Segoe UI Emoji", "Segoe UI Symbol", "PingFang SC", sans-serif;
+    font-size: 13px;
+    color: #222222;
+}
+
+QMainWindow {
+    background-color: #F7F8FA;
+}
+
+/* ============================================================
+   Sidebar (White, 260px)
+   ============================================================ */
+
+QFrame#sidebar {
+    background: #FFFFFF;
+    border-right: 1px solid #EAEAEA;
+}
+
+/* ============================================================
+   Header (76px)
+   ============================================================ */
+
+QFrame#header {
+    background: #FFFFFF;
+    border-bottom: 1px solid #EAEAEA;
+}
+
+/* ============================================================
+   Status Overview Card
+   ============================================================ */
+
+QFrame#statusOverview {
+    background: #FFFFFF;
+    border: 1px solid #EAEAEA;
+    border-radius: 18px;
+}
+
+/* ============================================================
+   Status Card V2
+   ============================================================ */
+
+QFrame#statusCardV2 {
+    background: #FFFFFF;
+    border: 1px solid #EAEAEA;
+    border-radius: 18px;
+}
+
+QFrame#statusCardV2:hover {
+    border: 1px solid #FFC928;
+}
+
+/* ============================================================
+   Tool Card V2
+   ============================================================ */
+
+QFrame#toolCardV2 {
+    background: #FFFFFF;
+    border: 1px solid #EAEAEA;
+    border-radius: 18px;
+}
+
+QFrame#toolCardV2:hover {
+    border: 1px solid #FFC928;
+}
+
+/* ============================================================
+   Network Tool Card
+   ============================================================ */
+
+QFrame#netToolCard {
+    background: #FFFFFF;
+    border: 1px solid #EAEAEA;
+    border-radius: 18px;
+}
+
+QFrame#netToolCard:hover {
+    border: 1px solid #FFC928;
+}
+
+/* ============================================================
+   Log Container
+   ============================================================ */
+
+QFrame#logContainer {
+    background: #FFFFFF;
+    border: 1px solid #EAEAEA;
+    border-radius: 18px;
+}
+
+/* ============================================================
+   Scrollbar (Fluent Style)
+   ============================================================ */
+
+QScrollBar:vertical {
+    background: transparent;
+    width: 6px;
+    margin: 0;
+}
+
+QScrollBar::handle:vertical {
+    background: #D0D0D0;
+    border-radius: 3px;
+    min-height: 30px;
+}
+
+QScrollBar::handle:vertical:hover {
+    background: #B0B0B0;
+}
+
+QScrollBar::handle:vertical:pressed {
+    background: #909090;
+}
+
+QScrollBar::add-line:vertical,
+QScrollBar::sub-line:vertical {
+    height: 0;
+}
+
+QScrollBar:horizontal {
+    background: transparent;
+    height: 6px;
+    margin: 0;
+}
+
+QScrollBar::handle:horizontal {
+    background: #D0D0D0;
+    border-radius: 3px;
+    min-width: 30px;
+}
+
+QScrollBar::handle:horizontal:hover {
+    background: #B0B0B0;
+}
+
+QScrollBar::handle:horizontal:pressed {
+    background: #909090;
+}
+
+QScrollBar::add-line:horizontal,
+QScrollBar::sub-line:horizontal {
+    width: 0;
+}
+
+/* ============================================================
+   Line Edit
+   ============================================================ */
+
+QLineEdit {
+    background: #FFFFFF;
+    border: 1px solid #EAEAEA;
+    border-radius: 10px;
+    padding: 6px 12px;
+    font-size: 13px;
+    color: #222222;
+    selection-background-color: #FFC928;
+    selection-color: #FFFFFF;
+}
+
+QLineEdit:focus {
+    border: 2px solid #FFC928;
+    padding: 7px 15px;
+}
+
+QLineEdit:hover:!focus {
+    border: 1px solid #FFC928;
+}
+
+QLineEdit:disabled {
+    background: #F7F8FA;
+    color: #9CA3AF;
+}
+
+/* ============================================================
+   Text Edit
+   ============================================================ */
+
+QTextEdit {
+    background: #FFFFFF;
+    border: 1px solid #EAEAEA;
+    border-radius: 18px;
+    padding: 14px;
+    font-size: 13px;
+    color: #222222;
+    selection-background-color: #FFC928;
+    selection-color: #FFFFFF;
+}
+
+QTextEdit:focus {
+    border: 2px solid #FFC928;
+}
+
+/* ============================================================
+   Plain Text Edit
+   ============================================================ */
+
+QPlainTextEdit {
+    background: #FFFFFF;
+    border: 1px solid #EAEAEA;
+    border-radius: 18px;
+    padding: 14px;
+    font-size: 11px;
+    font-family: "Consolas", "Cascadia Code", monospace;
+    color: #222222;
+    selection-background-color: #FFC928;
+    selection-color: #FFFFFF;
+}
+
+QPlainTextEdit:focus {
+    border: 2px solid #FFC928;
+}
+
+/* ============================================================
+   Push Button (Default)
+   ============================================================ */
+
+QPushButton {
+    background: #FFFFFF;
+    border: 1px solid #EAEAEA;
+    border-radius: 8px;
+    padding: 3px 10px;
+    font-size: 10px;
+    font-weight: 700;
+    color: #222222;
+    min-height: 20px;
+    font-family: "Microsoft YaHei", "Segoe UI", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
+}
+
+QPushButton:hover {
+    background: #FFF8E1;
+    border: 1px solid #FFC928;
+    color: #FFC928;
+}
+
+QPushButton:pressed {
+    background: #FFEBA3;
+}
+
+QPushButton:disabled {
+    background: #F7F8FA;
+    color: #9CA3AF;
+    border: 1px solid #F0F0F0;
+}
+
+/* Primary button variant */
+QPushButton[primary="true"] {
+    background: #FFC928;
+    border: none;
+    color: #FFFFFF;
+    font-weight: 700;
+}
+
+QPushButton[primary="true"]:hover {
+    background: #FFB300;
+}
+
+QPushButton[primary="true"]:pressed {
+    background: #E09C00;
+}
+
+/* Danger button variant */
+QPushButton[danger="true"] {
+    background: #D13438;
+    border: none;
+    color: #FFFFFF;
+    font-weight: 700;
+}
+
+QPushButton[danger="true"]:hover {
+    background: #B32D30;
+}
+
+QPushButton[danger="true"]:pressed {
+    background: #9A282B;
+}
+
+/* ============================================================
+   Label
+   ============================================================ */
+
+QLabel {
+    color: #222222;
+    background: transparent;
+}
+
+/* ============================================================
+   Frame (Card/Surface)
+   ============================================================ */
+
+QFrame#card {
+    background: #FFFFFF;
+    border: 1px solid #EAEAEA;
+    border-radius: 18px;
+}
+
+QFrame#card:hover {
+    border: 1px solid #FFC928;
+}
+
+QFrame#statusCard {
+    background: #FFFFFF;
+    border: 1px solid #EAEAEA;
+    border-radius: 18px;
+}
+
+QFrame#statusCard:hover {
+    border: 1px solid #FFC928;
+}
+
+/* ============================================================
+   Progress Bar
+   ============================================================ */
+
+QProgressBar {
+    background: #E8E8E8;
+    border: none;
+    border-radius: 4px;
+    height: 8px;
+    text-align: center;
+    font-size: 11px;
+}
+
+QProgressBar::chunk {
+    background: #FFC928;
+    border-radius: 4px;
+}
+
+/* ============================================================
+   Group Box
+   ============================================================ */
+
+QGroupBox {
+    background: #FFFFFF;
+    border: 1px solid #EAEAEA;
+    border-radius: 18px;
+    margin-top: 12px;
+    padding: 14px 12px 12px 12px;
+    font-weight: 600;
+    font-size: 13px;
+}
+
+QGroupBox::title {
+    subcontrol-origin: margin;
+    subcontrol-position: top left;
+    padding: 4px 12px;
+    color: #222222;
+}
+
+/* ============================================================
+   Combo Box
+   ============================================================ */
+
+QComboBox {
+    background: #FFFFFF;
+    border: 1px solid #EAEAEA;
+    border-radius: 10px;
+    padding: 6px 12px;
+    font-size: 13px;
+    color: #222222;
+    min-height: 20px;
+}
+
+QComboBox:hover {
+    border: 1px solid #FFC928;
+}
+
+QComboBox:focus {
+    border: 2px solid #FFC928;
+}
+
+QComboBox::drop-down {
+    border: none;
+    width: 30px;
+}
+
+QComboBox QAbstractItemView {
+    background: #FFFFFF;
+    border: 1px solid #EAEAEA;
+    border-radius: 10px;
+    selection-background-color: #FFF8E1;
+    selection-color: #222222;
+    padding: 4px;
+}
+
+/* ============================================================
+   Check Box
+   ============================================================ */
+
+QCheckBox {
+    spacing: 8px;
+    font-size: 14px;
+    color: #222222;
+}
+
+QCheckBox::indicator {
+    width: 18px;
+    height: 18px;
+    border: 2px solid #D0D0D0;
+    border-radius: 4px;
+}
+
+QCheckBox::indicator:checked {
+    background: #FFC928;
+    border: 2px solid #FFC928;
+}
+
+QCheckBox::indicator:hover {
+    border: 2px solid #FFC928;
+}
+
+/* ============================================================
+   Radio Button
+   ============================================================ */
+
+QRadioButton {
+    spacing: 8px;
+    font-size: 14px;
+    color: #222222;
+}
+
+QRadioButton::indicator {
+    width: 18px;
+    height: 18px;
+    border: 2px solid #D0D0D0;
+    border-radius: 10px;
+}
+
+QRadioButton::indicator:checked {
+    background: #FFC928;
+    border: 2px solid #FFC928;
+}
+
+QRadioButton::indicator:hover {
+    border: 2px solid #FFC928;
+}
+
+/* ============================================================
+   Tooltip
+   ============================================================ */
+
+QToolTip {
+    background: #222222;
+    color: #FFFFFF;
+    border: none;
+    border-radius: 4px;
+    padding: 6px 10px;
+    font-size: 12px;
+}
+
+/* ============================================================
+   Splitter
+   ============================================================ */
+
+QSplitter::handle {
+    background: #EAEAEA;
+    width: 1px;
+}
+
+/* ============================================================
+   List Widget (Fluent Style)
+   ============================================================ */
+
+QListWidget {
+    background: #FFFFFF;
+    border: 1px solid #EAEAEA;
+    border-radius: 18px;
+    padding: 4px;
+    outline: none;
+}
+
+QListWidget::item {
+    border-radius: 10px;
+    padding: 3px 10px;
+    min-height: 26px;
+}
+
+QListWidget::item:hover {
+    background: #FFF8E1;
+}
+
+QListWidget::item:selected {
+    background: #FFF8E1;
+    color: #222222;
+}

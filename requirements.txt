@@ -1,0 +1,7 @@
+# 运行期硬依赖（缺一不可）
+PySide6>=6.5        # GUI 框架
+psutil>=5.9         # system_info_service 顶层导入，缺失会启动失败
+
+# 可选增强依赖（未安装时自动降级到 PowerShell/WMI）：
+# pywin32>=306       # 打印机管理增强（win32print / win32com.shell）
+# wmi>=1.5           # 主板 / BIOS / 序列号查询（已有 PowerShell 降级路径）

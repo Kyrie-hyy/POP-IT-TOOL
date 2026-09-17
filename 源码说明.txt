@@ -1,0 +1,51 @@
+IT-Toolbox 源码备份
+====================
+
+备份时间：2026-09-02 11:10
+版本：v3.0.0（含 2026-09-01/02 全部修复与新功能）
+
+【这份备份包含什么】
+
+完整可构建源码，与最新 exe（dist\POP-IT-Toolbox.exe，11:07 版）功能一致：
+- P0 修复：network_service Optional 导入崩溃、build.py hiddenimports 补齐等 7 处
+- 首页改版：硬件状态区块已删除；Disk 卡片悬停显示实时磁盘弹窗（每秒刷新）
+- 网络页新功能：「更改DNS」工具（原「刷新DNS」）
+  · 网卡下拉框：列出全部物理网卡（以太网/WLAN，含未插线网卡），标注当前 DNS
+  · 主 DNS 下拉：6 个常用预设（阿里/腾讯/114/360/Google/Cloudflare）+ 自定义
+  · 备 DNS 下拉：不使用/各预设备地址（自动排除与主相同）/与主相同/自定义
+  · DHCP 一键还原勾选项；应用后自动刷新 DNS 缓存
+- 图标库新增 hard-drive 线性图标
+
+【如何用这份备份】
+
+1. 改代码：直接编辑 app/ 下的 .py 文件
+2. 打包 exe：进入本目录，运行
+     python build.py
+   产物输出到 dist\POP-IT-Toolbox.exe 与 dist\POP-IT-Toolbox-v3.0.0-发布版\
+3. 环境依赖（打包机需安装）：
+     pip install PySide6 psutil pywin32 pyinstaller packaging
+   （Python 3.13 实测通过；PyInstaller 6.22）
+
+【目录结构】
+
+  main_v2.py            程序入口（主窗口、UAC、启动画面、全局异常兜底）
+  build.py              一键打包脚本（生成 spec + PyInstaller + 发布包）
+  app/core/             基础设施：命令执行/配置/日志/路径/图标库
+  app/services/         业务服务（约 20 个，网络/磁盘/系统信息等）
+  app/pages/            功能页面（首页/网络/清理/BitLocker 等 12 个）
+  app/components/       UI 组件（顶栏/侧栏/后台线程）
+  app/theme/            配色与全局样式
+  assets/               图标与提权 manifest
+  scripts/verify_ui.py  UI 自检脚本
+
+【本次备份未包含（可再生的过程产物）】
+
+  dist/  logs/  reports/  __pycache__/
+  —— 这些由构建/运行自动生成，不影响再次打包。
+
+【已知遗留（不影响使用）】
+
+  - tools/CorpLinkDiagnose.exe、tools/geek.exe、remote/POPMARTremote5.4.exe
+    三个内嵌工具不在源码包里，打包时自动跳过（飞连诊断/强制卸载/远程协助
+    内置安装功能不可用）。如有这些 exe，放回对应目录重新 build 即可嵌入。
+  - 更新服务器为占位地址，可用 exe 同目录 update_config.json 切换。
