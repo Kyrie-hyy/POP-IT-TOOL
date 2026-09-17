@@ -6,7 +6,7 @@ from app.agent.formatter import ResultFormatter
 from app.logger.logger import logger
 from app.ai.ai_planner import ai_planner
 from app.ai.summary import ai_summary
-
+from app.report.exporter import report_exporter
 
 class POPITAgent:
     """
@@ -102,6 +102,12 @@ class POPITAgent:
             summary = ai_summary.summarize(
                 user_input,
                 reply,
+            )
+
+            report_exporter.export(
+                user_input,
+                reply,
+                summary,
             )
 
             print("summary =", summary)

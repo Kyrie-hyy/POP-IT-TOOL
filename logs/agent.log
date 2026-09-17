@@ -46,3 +46,19 @@
 [2026-09-16 14:50:42] EXECUTE
 [{'success': True, 'tool': 'network', 'action': 'check_network', 'result': Result(success=True, message='网络连通性检测 成功', stdout='Pinging www.a.shifen.com [220.181.111.1] with 32 bytes of data:\r\nReply from 220.181.111.1: bytes=32 time=8ms TTL=53\r\nReply from 220.181.111.1: bytes=32 time=9ms TTL=53\r\n\r\nPing statistics for 220.181.111.1:\r\n    Packets: Sent = 2, Received = 2, Lost = 0 (0% loss),\r\nApproximate round trip times in milli-seconds:\r\n    Minimum = 8ms, Maximum = 9ms, Average = 8ms', stderr='', code=0, data=None, elapsed=1.1)}]
 
+============================================================
+[2026-09-16 17:16:44] USER
+飞连连不上
+
+============================================================
+[2026-09-16 17:16:46] AI
+[{'tool': 'network', 'action': 'check_network'}]
+
+============================================================
+[2026-09-16 17:16:46] PLAN
+[Task(tool='network', action='check_network', reason='AI 决策')]
+
+============================================================
+[2026-09-16 17:16:47] EXECUTE
+[{'success': True, 'tool': 'network', 'action': 'check_network', 'result': Result(success=True, message='网络连通性检测 成功', stdout='Pinging www.a.shifen.com [220.181.111.1] with 32 bytes of data:\r\nReply from 220.181.111.1: bytes=32 time=7ms TTL=53\r\nReply from 220.181.111.1: bytes=32 time=9ms TTL=53\r\n\r\nPing statistics for 220.181.111.1:\r\n    Packets: Sent = 2, Received = 2, Lost = 0 (0% loss),\r\nApproximate round trip times in milli-seconds:\r\n    Minimum = 7ms, Maximum = 9ms, Average = 8ms', stderr='', code=0, data=None, elapsed=1.13)}]
+
